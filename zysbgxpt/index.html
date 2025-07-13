@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>静态页面示例</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+</head>
+<body>
+<div id="app" class="container">
+    <div class="head-box">
+        <img src="./assets/img_1.png" alt="">
+        <div class="name">CBMA检测设备共享平台</div>
+    </div>
+    <div class="nav">
+        <div class="nav-list">
+            <div class="nav-item" v-for="i in navList">{{i}}</div>
+        </div>
+    </div>
+    <div class="swiper">
+        <div class="block">
+            <el-carousel trigger="click" height="500px">
+                <el-carousel-item>
+                    <img src="./assets/swiper.png" alt="">
+                </el-carousel-item>
+                <el-carousel-item>
+                    <img src="./assets/swiper1.jpg" alt="">
+                </el-carousel-item>
+                <el-carousel-item>
+                    <img src="./assets/swiper2.jpg" alt="">
+                </el-carousel-item>
+            </el-carousel>
+        </div>
+    </div>
+    <div class="top-box">
+        <div class="box">
+            <div class="box-title">
+                <div class="title-sign"></div>
+                <div class="title-name">供应单位</div>
+            </div>
+            <div class="info-list">
+                <div class="info-item">
+                    <img class="build" src="./assets/build.png" alt="">
+                    <div class="right">
+                        <div class="name">中国建材总院北京分公司</div>
+                        <el-progress style="width: 90%" :percentage="50" status="exception" :show-text="false"></el-progress>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <img class="build" src="./assets/build.png" alt="">
+                    <div class="right">
+                        <div class="name">水泥新材院</div>
+                        <el-progress style="width: 90%" :percentage="20" status="exception" :show-text="false"></el-progress>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <img class="build" src="./assets/build.png" alt="">
+                    <div class="right">
+                        <div class="name">哈尔滨玻璃钢研究院有限公司</div>
+                        <el-progress style="width: 90%" :percentage="70" status="exception" :show-text="false"></el-progress>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <img class="build" src="./assets/build.png" alt="">
+                    <div class="right">
+                        <div class="name">中材高新材料股份有限公司</div>
+                        <el-progress style="width: 90%" :percentage="60" status="exception" :show-text="false"></el-progress>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <img class="build" src="./assets/build.png" alt="">
+                    <div class="right">
+                        <div class="name">中国建材总院北京分公司</div>
+                        <el-progress style="width: 90%" :percentage="50" status="exception" :show-text="false"></el-progress>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <img class="build" src="./assets/build.png" alt="">
+                    <div class="right">
+                        <div class="name">水泥新材院</div>
+                        <el-progress style="width: 90%" :percentage="20" status="exception" :show-text="false"></el-progress>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <img class="build" src="./assets/build.png" alt="">
+                    <div class="right">
+                        <div class="name">哈尔滨玻璃钢研究院有限公司</div>
+                        <el-progress style="width: 90%" :percentage="70" status="exception" :show-text="false"></el-progress>
+                    </div>
+                </div>  
+            </div>
+        </div>
+        <div class="box">
+            <div class="box-title">
+                <div class="title-sign"></div>
+                <div class="title-name">检测分类</div>
+            </div>
+            <div class="info2">
+                <div class="content">
+                    <img src="./assets/icons.png" alt="">
+                    <img src="./assets/icons.png" alt="">
+                    <img src="./assets/icons.png" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="box">
+            <div class="box-title">
+                <div class="title-sign"></div>
+                <div class="title-name">通知公告</div>
+            </div>
+            <div class="info3">
+                <div class="article">分析测试中心关于大型仪器设备共享平台系统升级期...</div>
+                <div class="article">分析测试中心关于2023年暑假预约测试的通知</div>
+                <div class="article">分析测试中心关于2022年暑假预约测试的通知（转发）</div>
+                <div class="article">关于举办第十届共享杯科技资源共享服务创新大赛的...</div>
+                <div class="article">分析测试中心全谱火花直续光谱仪和双光束紫外可见...</div>
+                <div class="article">分析测试中心关于2022年寒假预约测试的通知</div>
+            </div>
+        </div>
+    </div>
+    <div class="middle-box">
+        <div class="left">
+            <div class="box-title">
+                <div class="title-name">最新设备预约排行</div>
+            </div>
+            <div class="info">
+                <div class="item">
+                    <div class="num red">1</div>
+                    <div class="name">场发射扫描电镜</div>
+                    <div class="time">4830.97小时</div>
+                </div>
+                <div class="item">
+                    <div class="num red">2</div>
+                    <div class="name">X射线衍射仪</div>
+                    <div class="time">4463.00小时</div>
+                </div>
+                <div class="item">
+                    <div class="num red">3</div>
+                    <div class="name">场发射透射电子显微镜</div>
+                    <div class="time">3559.00小时</div>
+                </div>
+                <div class="item">
+                    <div class="num">4</div>
+                    <div class="name">钨灯丝扫描电子显微镜</div>
+                    <div class="time">2537.03小时</div>
+                </div>
+                <div class="item">
+                    <div class="num">5</div>
+                    <div class="name">X射线光电子能谱仪</div>
+                    <div class="time">1685.42小时</div>
+                </div>
+                <div class="item">
+                    <div class="num">6</div>
+                    <div class="name">X射线衍射仪</div>
+                    <div class="time">1230.00小时</div>
+                </div>
+            </div>
+        </div>
+        <div class="right">
+            <div class="box-title">
+                <div class="title-name red">最新设备预约排行</div>
+                <div class="title-name">设备使用信息走势图</div>
+            </div>
+            <table class="table" style="border: none">
+                <tr class="head" style="border: none">
+                    <th v-for="i in trList" style="border: none">{{i}}</th>
+                </tr>
+                <tr v-for="(row, rowIndex) in tableData" :key="rowIndex" style=" border-bottom: 1px solid gainsboro;">
+                    <td v-for="(cell, cellIndex) in row" :key="cellIndex" style=" border-bottom: 1px solid gainsboro;text-align: center">{{cell}}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="bottom-box">
+        <div class="box">
+            <div class="box-title">
+                <div class="title-sign"></div>
+                <div class="title-name">检测设备</div>
+            </div>
+            <div class="info">
+                <div class="item">
+                    <img src="./assets/equipment1.jpg" alt="">
+                    <div>航空玻璃光畸变仪</div>
+                </div>
+                <div class="item">
+                    <img src="./assets/equipment2.jpg" alt="">
+                    <div>透光率/雾度测定仪</div>
+                </div>
+                <div class="item">
+                    <img src="./assets/equipment3.png" alt="">
+                    <div>阻抗分析仪</div>
+                </div>
+                <div class="item">
+                    <img src="./assets/equipment4.png" alt="">
+                    <div>激光粒度仪</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            navList: ['首页', '总院介绍', '通知公告', '使用指南', '仪器预约', '文档下载', '联系我们'],
+            trList: ['设备编号', '设备名称', '规格/型号', '预约时间段', '提交时间', '审核状态', '管理员'],
+            tableData: [
+                ['12018360','场发射扫描电镜','FEINova N..','202512128 15:00:00--202512128 16:0000','2025-02-27 09:59:10','通过','马永存'],
+                ['20021170','X射线衍射仪','D8ADVANCE','202512127 11:00:00--202512127 11:30:00','2025-02-27 09:46:34','通过','陈同彩'],
+                ['16025150','X射线衍射仪','D8ADVANCE','202512128 11:00:00--202512128 11:30:00','2025-02-27 09:45:54','待审核','陈同彩'],
+                ['17010670','场发射运射电子显微镜','Talos F200X','20251212810:00:00--20251212810:30:00','2025-02-27 09:17:46','待审核','何文'],
+                ['7001940','热重/差热综合热分析仪','Diamond TG...','','2025-02-26 21:18:09','通过','邓翠贞'],
+                ['7001940','热重/差热综合热分析仪','Diamond TG...','','2025-02-26 21:17:47','通过','邓翠贞'],
+            ],
+        }
+    });
+</script>
+</body>
+</html>
