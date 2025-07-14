@@ -165,14 +165,16 @@
                 <div class="title-name red">最新设备预约排行</div>
                 <div class="title-name">设备使用信息走势图</div>
             </div>
-            <table class="table" style="border: none">
-                <tr class="head" style="border: none">
-                    <th v-for="i in trList" style="border: none">{{i}}</th>
-                </tr>
-                <tr v-for="(row, rowIndex) in tableData" :key="rowIndex" style=" border-bottom: 1px solid gainsboro;">
-                    <td v-for="(cell, cellIndex) in row" :key="cellIndex" style=" border-bottom: 1px solid gainsboro;text-align: center">{{cell}}</td>
-                </tr>
-            </table>
+            <div class="table-container">
+                <table class="table" style="border: none">
+                    <tr class="head" style="border: none">
+                        <th v-for="i in trList" style="border: none">{{i}}</th>
+                    </tr>
+                    <tr v-for="(row, rowIndex) in tableData" :key="rowIndex" style=" border-bottom: 1px solid gainsboro;">
+                        <td v-for="(cell, cellIndex) in row" :key="cellIndex" style=" border-bottom: 1px solid gainsboro;text-align: center">{{cell}}</td>
+                    </tr>
+                </table>
+            </div>
         </div>
     </div>
     <div class="bottom-box">
